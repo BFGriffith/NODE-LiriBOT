@@ -1,4 +1,4 @@
-// node.js “Liri” BOT — version 0.0
+// node.js “Liri” BOT — version 0.1
 /* ARGUMENTS:
 * my-tweets
 * spotify-this-song
@@ -7,3 +7,4 @@
 */
 
 // grab data from keys.js and store it into a variable
+var LiriBOT = require("./keys.js");
