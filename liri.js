@@ -1,3 +1,4 @@
+// node.js “Liri” BOT — version 0.0
 /* ARGUMENTS:
 * my-tweets
 * spotify-this-song
