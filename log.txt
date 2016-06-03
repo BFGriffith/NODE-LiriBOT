@@ -1,0 +1,6 @@
+/*
+In addition to outputting the data to the terminal,
+also output all data to a txt file called log.txt
+Make sure that each command run gets appended to the log.txt file.
+The log.txt file should not be overwritten each time a command runs.
+*/
