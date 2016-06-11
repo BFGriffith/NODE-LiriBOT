@@ -124,3 +124,29 @@ function fetchMovieInfo(inquiry) {
     writeLog(logObject); //write to log.txt
   }); //END-OMDB-call
 }; //END-fetchMovieInfo
+
+function randomTASKinquiry(inquiry) {
+  fs.readFile('random.txt', 'utf8', function(err, data) {
+    if (err) {
+      console.log(err);
+    }
+    var output = data.toString().split(','); //splits string from random.txt into an array
+    task = output[0]; //set task from random.txt array
+    inquiry = output[1]; //set request from random.txt array
+    //runs new parameters back through switch case
+    switch (task) {
+      case 'my-tweets':
+        fetchTweets();
+        break;
+      case 'spotify-this-song':
+        spotifySongInfo(inquiry);
+        break;
+      case 'movie-this':
+        fetchMovieInfo(inquiry);
+        break;
+        //covers task requests not matching pre-defined commands
+      default:
+        console.log('The prompt you typed for the requested task was not recognized; please double-check your spelling and try again.');
+    }; //END-switch
+  }); //END-readFile
+}; //END-randomTASKinquiry
