@@ -4,3 +4,10 @@ also output all data to a txt file called log.txt
 Make sure that each command run gets appended to the log.txt file.
 The log.txt file should not be overwritten each time a command runs.
 */
+spotify-this-song, Freebird, The Theorist, Hotline Bling (Piano Arrangement), https://p.scdn.co/mp3-preview/7af573ab1e33eee7aedba773c22bed3746e4d3ce, Freebirds: The Hits, Vol. 4
+spotify-this-song, what's+my+age+again, Vitamin String Quartet, What's My Age Again?, https://p.scdn.co/mp3-preview/65033f88ead38d76b4506574e059a8a62a7e2a13, Vitamin String Quartet Performs Blink-182
+spotify-this-song, Tupelo Honey, Cassandra Wilson, Tupelo Honey/Angel, https://p.scdn.co/mp3-preview/2a195300b5418e2584dea8fe51fab0160e4fedf2, Closer To You: The Pop Side
+movie-this, Yojimbo, Yojimbo, 1961, Toshirô Mifune, Tatsuya Nakadai, Yôko Tsukasa, Isuzu Yamada, A crafty ronin comes to a town divided by two criminal gangs and decides to play them against each other to free the town., Japan, Japanese, 8.3, 8.8, http://www.rottentomatoes.com/m/yojimbo/
+movie-this, Sword+Of+Doom, The Sword of Doom, 1966, Tatsuya Nakadai, Michiyo Aratama, Yûzô Kayama, Yôko Naitô, Through his unconscionable actions against others, a sociopath samurai builds a trail of vendettas that follow him closely., Japan, Japanese, 8.1, 6.9, http://www.rottentomatoes.com/m/the_sword_of_doom/
+spotify-this-song, "I Want it That Way"
+, Glee Cast, Bye Bye Bye / I Want It That Way (Glee Cast Version), https://p.scdn.co/mp3-preview/3aa63b5c98b98ae333e567813e5c720abb2914f0, Bye Bye Bye / I Want It That Way (Glee Cast Version)
