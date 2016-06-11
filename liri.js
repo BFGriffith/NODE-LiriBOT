@@ -1,4 +1,5 @@
-// node.js “Liri” BOT — version 0.2
+// node.js “Liri” BOT — version 1.0
+// props to http://1lineart.kulaone.com/ for some ASCII character-art to visually spice up this node app a bit
 /** INSTRUCTIONS:
 * node liri.js TASK REQUEST
 * TASKS:
@@ -23,8 +24,7 @@ var tSearch = { //Twitter search params
   count: 20,
 }
 
-//initialize string variable to be written to log.txt
-var logObject = "";
+var logObject = ""; //initialize string variable to be written to log.txt
 /* WRITE to log.txt */
 function writeLog(textLog) {
   fs.appendFile('log.txt', textLog, function(err) {
@@ -66,3 +66,29 @@ function fetchTweets() {
     writeLog(logObject); //write to log.txt
   });
 }; //END-fetchTweets
+
+/* SPOTIFY: */
+function spotifySongInfo(inquiry) {
+  if (!inquiry) {
+    inquiry = "what's+my+age+again"; //assigned default in case no inquiry entered after task
+  };
+  var queryUrl = 'https://api.spotify.com/v1/search?q=' + inquiry + '&limit=5&type=track';
+  request(queryUrl, function(err, response, body) { //SpotifyAPI-call
+    if (err) {
+      console.log(err);
+    };
+    body = JSON.parse(body);
+    console.log('♫♪.ılılıll|̲̅̅●̲̅̅|̲̅̅=̲̅̅|̲̅̅●̲̅̅|llılılı.♫♪');
+    console.log('The best rated five matches for your search are:');
+    for (var i = 0; i < body.tracks.items.length; i++) {
+      console.log('artist(s) = ' + body.tracks.items[i].artists[0].name);
+      console.log('song title = ' + body.tracks.items[i].name);
+      console.log('preview = ' + body.tracks.items[i].preview_url);
+      console.log('album = ' + body.tracks.items[i].album.name);
+      console.log('♫♪.ılılıll|̲̅̅●̲̅̅|̲̅̅=̲̅̅|̲̅̅●̲̅̅|llılılı.♫♪');
+      //inquiry request and response concatenation to log.txt
+      logObject = task + ", " + inquiry + ", " + body.tracks.items[i].artists[0].name + ", " + body.tracks.items[i].name + ", " + body.tracks.items[i].preview_url + ", " + body.tracks.items[i].album.name + "\n";
+    }; //END-for-loop
+    writeLog(logObject); //log.txt
+  }); //END-SpotifyAPI-call
+}; //END-spotifySongInfo
