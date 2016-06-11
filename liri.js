@@ -79,17 +79,45 @@ function spotifySongInfo(inquiry) {
       console.log(err);
     };
     body = JSON.parse(body);
-    console.log('♫♪.ılılıll|̲̅̅●̲̅̅|̲̅̅=̲̅̅|̲̅̅●̲̅̅|llılılı.♫♪');
+    console.log('♬♩♪♫|̲̅̅●̲̅̅|̲̅̅=̲̅̅|̲̅̅●̲̅̅|̲̅̅♫♪♩♬');
     console.log('The best rated five matches for your search are:');
     for (var i = 0; i < body.tracks.items.length; i++) {
       console.log('artist(s) = ' + body.tracks.items[i].artists[0].name);
       console.log('song title = ' + body.tracks.items[i].name);
       console.log('preview = ' + body.tracks.items[i].preview_url);
       console.log('album = ' + body.tracks.items[i].album.name);
-      console.log('♫♪.ılılıll|̲̅̅●̲̅̅|̲̅̅=̲̅̅|̲̅̅●̲̅̅|llılılı.♫♪');
+      console.log('♬♩♪♫|̲̅̅●̲̅̅|̲̅̅=̲̅̅|̲̅̅●̲̅̅|̲̅̅♫♪♩♬');      
       //inquiry request and response concatenation to log.txt
       logObject = task + ", " + inquiry + ", " + body.tracks.items[i].artists[0].name + ", " + body.tracks.items[i].name + ", " + body.tracks.items[i].preview_url + ", " + body.tracks.items[i].album.name + "\n";
     }; //END-for-loop
     writeLog(logObject); //write to log.txt
   }); //END-SpotifyAPI-call
 }; //END-spotifySongInfo
+
+/* OMDB function */
+function fetchMovieInfo(inquiry) {
+  if (!inquiry) { // cxxxxx][========================>
+    inquiry = 'Sword+Of+Doom'; //default if no inquiry is typed into the request argv
+  };
+  var queryUrl = 'http://www.omdbapi.com/?t=' + inquiry + '&y=&plot=short&r=json&tomatoes=true';
+  request(queryUrl, function(err, response, body) { //OMDB-call
+    if (err) {
+      console.log(err);
+    }
+    body = JSON.parse(body);
+    console.log('✪ ✦ ✧ ✩ ✫ ✬ ✭ ✮ ✯ ✰ ★ ✪');
+    console.log('title = ' + body.Title);
+    console.log('year released = ' + body.Year);
+    console.log('actors = ' + body.Actors);
+    console.log('plot summary = ' + body.Plot);
+    console.log('countries = ' + body.Country);
+    console.log('languages = ' + body.Language);
+    console.log('IMDB rating = ' + body.imdbRating);
+    console.log('Rotten Tomatoes RATING = ' + body.tomatoRating);
+    console.log('Rotten Tomatoes URL = ' + body.tomatoURL);
+    console.log('✪ ✦ ✧ ✩ ✫ ✬ ✭ ✮ ✯ ✰ ★ ✪');
+    //inquiry request and response concatenation to log.txt
+    logObject = task + ", " + inquiry + ", " + body.Title + ", " + body.Year + ", " + body.Actors + ", " + body.Plot + ", " + body.Country + ", " + body.Language + ", " + body.imdbRating + ", " + body.tomatoRating + ", " + body.tomatoURL + "\n";
+    writeLog(logObject); //write to log.txt
+  }); //END-OMDB-call
+}; //END-fetchMovieInfo
