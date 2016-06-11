@@ -4,3 +4,5 @@ also output all data to a txt file called log.txt
 Make sure that each command run gets appended to the log.txt file.
 The log.txt file should not be overwritten each time a command runs.
 */
+spotify-this-song, Freebird, The Theorist, Hotline Bling (Piano Arrangement), https://p.scdn.co/mp3-preview/7af573ab1e33eee7aedba773c22bed3746e4d3ce, Freebirds: The Hits, Vol. 4
+spotify-this-song, what's+my+age+again, Vitamin String Quartet, What's My Age Again?, https://p.scdn.co/mp3-preview/65033f88ead38d76b4506574e059a8a62a7e2a13, Vitamin String Quartet Performs Blink-182
