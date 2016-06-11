@@ -47,6 +47,9 @@ switch (task) {
   case 'movie-this':
     fetchMovieInfo(inquiry);
     break;
+  case 'do-what-it-says':
+    randomTASKinquiry(inquiry);
+    break;
   default: //user mistake error handler
     console.log('The prompt you typed for the requested task was not recognized; please double-check your spelling and try again.');
 }; //END-SWITCH
