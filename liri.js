@@ -1,5 +1,6 @@
-// node.js “Liri” BOT — version 1.0
+// node.js “Liri” BOT — version 1.0 ¯\_(ツ)_/¯
 // props to http://1lineart.kulaone.com/ for some ASCII character-art to visually spice up this node app a bit
+// ()==[:::::::::::::>
 /** INSTRUCTIONS:
 * node liri.js TASK REQUEST
 * TASKS:
@@ -89,6 +90,6 @@ function spotifySongInfo(inquiry) {
       //inquiry request and response concatenation to log.txt
       logObject = task + ", " + inquiry + ", " + body.tracks.items[i].artists[0].name + ", " + body.tracks.items[i].name + ", " + body.tracks.items[i].preview_url + ", " + body.tracks.items[i].album.name + "\n";
     }; //END-for-loop
-    writeLog(logObject); //log.txt
+    writeLog(logObject); //write to log.txt
   }); //END-SpotifyAPI-call
 }; //END-spotifySongInfo
