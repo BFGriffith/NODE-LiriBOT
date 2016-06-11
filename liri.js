@@ -1,4 +1,4 @@
-// node.js “Liri” BOT — version 1.1 ¯\_(ツ)_/¯
+// node.js “Liri” BOT — version 1.3 ¯\_(ツ)_/¯
 // props to http://1lineart.kulaone.com/ for some ASCII character-art to visually spice up this node app a bit
 // ()==[:::::::::::::>
 /** INSTRUCTIONS:
