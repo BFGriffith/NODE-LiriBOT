@@ -26,6 +26,21 @@ function writeLog(textLog) {
   });
 }; //END-writeLog
 
+/* SWITCH statement to select desired task */
+switch (task) {
+  case 'my-tweets':
+    fetchTweets();
+    break;
+  case 'spotify-this-song':
+    spotifySongInfo(inquiry);
+    break;
+  case 'movie-this':
+    fetchMovieInfo(inquiry);
+    break;
+  default: //user mistake error handler
+    console.log('The prompt you typed for the requested task was not recognized; please double-check your spelling and try again.');
+}; //END-SWITCH
+
 //TwitterAPI calls (using keys):
 var tweets = new twitter(LiriTwitterBOT.LiriTwitterBOT);
 var tSearch = { //Twitter search params
