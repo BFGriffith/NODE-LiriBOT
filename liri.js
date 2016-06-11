@@ -1,14 +1,14 @@
-// node.js “Liri” BOT — version 1.0 ¯\_(ツ)_/¯
+// node.js “Liri” BOT — version 1.1 ¯\_(ツ)_/¯
 // props to http://1lineart.kulaone.com/ for some ASCII character-art to visually spice up this node app a bit
 // ()==[:::::::::::::>
 /** INSTRUCTIONS:
-* node liri.js TASK REQUEST
-* TASKS:
-  * @param my-tweets
-  * @param spotify-this-song
-  * @param movie-this
-  * @param do-what-it-says
-*/
+ * node liri.js TASK REQUEST
+ * TASKS:
+ * @param my-tweets
+ * @param spotify-this-song
+ * @param movie-this
+ * @param do-what-it-says
+ */
 /* DEPENDENCIES: */
 var fs = require('fs'); //fs node library allows file-system functionality
 var request = require('request'); //request node library
@@ -86,7 +86,7 @@ function spotifySongInfo(inquiry) {
       console.log('song title = ' + body.tracks.items[i].name);
       console.log('preview = ' + body.tracks.items[i].preview_url);
       console.log('album = ' + body.tracks.items[i].album.name);
-      console.log('♬♩♪♫|̲̅̅●̲̅̅|̲̅̅=̲̅̅|̲̅̅●̲̅̅|̲̅̅♫♪♩♬');      
+      console.log('♬♩♪♫|̲̅̅●̲̅̅|̲̅̅=̲̅̅|̲̅̅●̲̅̅|̲̅̅♫♪♩♬');
       //inquiry request and response concatenation to log.txt
       logObject = task + ", " + inquiry + ", " + body.tracks.items[i].artists[0].name + ", " + body.tracks.items[i].name + ", " + body.tracks.items[i].preview_url + ", " + body.tracks.items[i].album.name + "\n";
     }; //END-for-loop
