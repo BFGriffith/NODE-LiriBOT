@@ -1,6 +1,6 @@
 {
   "name": "node-liribot",
-  "version": "1.0.0",
+  "version": "1.3.0",
   "description": "command-line node.js app that takes in parameters and gives back data using several APIs",
   "main": "liri.js",
   "dependencies": {
